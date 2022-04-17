@@ -73,10 +73,11 @@ final class DetailsViewController: UIViewController {
     }
     
     private func setValues() {
-        exchangeValueLabel.text = "\(presenter?.currency.quote.usd?.price ?? .zero)"
-        let decimalValue = NSDecimalNumber(value: presenter?.currency.quote.btc?.price ?? .zero)
+        let decimalUsdValue = NSDecimalNumber(value: presenter?.currency.quote.usd?.price ?? .zero)
+        exchangeValueLabel.text = "\(decimalUsdValue)"
         
-        exchangeValueToBTCLabel.text = "\(decimalValue)"
+        let decimalBtcValue = NSDecimalNumber(value: presenter?.currency.quote.btc?.price ?? .zero)
+        exchangeValueToBTCLabel.text = "\(decimalBtcValue)"
 
         totalCoinsValueLabel.text = "\(presenter?.currency.totalSupply ?? .zero)"
         maxCoinsValueLabel.text = "\(presenter?.currency.maxSupply ?? .zero)"

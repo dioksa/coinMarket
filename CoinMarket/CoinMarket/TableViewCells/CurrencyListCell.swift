@@ -24,6 +24,8 @@ final class CurrencyListCell: UITableViewCell {
                    and price: Double) {
         currencyTitleLabel.text = name
         currencyCodeLabel.text = code
-        rateLabel.text = "\(price)"
+        
+        let decimalUsdValue = NSDecimalNumber(value: price)
+        rateLabel.text = "\(decimalUsdValue)"
     }
 }

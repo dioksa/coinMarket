@@ -15,8 +15,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="434" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fuU-2t-guK">
-                        <rect key="frame" x="16" y="8" width="37" height="65"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fuU-2t-guK">
+                        <rect key="frame" x="16" y="8" width="356.5" height="65"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-p1-hyW">
                                 <rect key="frame" x="0.0" y="0.0" width="37" height="28.5"/>
@@ -32,7 +32,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-nv-85u">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-nv-85u">
                         <rect key="frame" x="380.5" y="32" width="37.5" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <nil key="textColor"/>
@@ -45,6 +45,7 @@
                     <constraint firstItem="ncL-nv-85u" firstAttribute="centerY" secondItem="fuU-2t-guK" secondAttribute="centerY" id="2BK-zr-Bot"/>
                     <constraint firstAttribute="bottom" secondItem="fuU-2t-guK" secondAttribute="bottom" constant="8" id="2Lr-Tv-RBe"/>
                     <constraint firstAttribute="trailing" secondItem="ncL-nv-85u" secondAttribute="trailing" constant="16" id="8MT-yr-oTo"/>
+                    <constraint firstItem="ncL-nv-85u" firstAttribute="leading" secondItem="fuU-2t-guK" secondAttribute="trailing" constant="8" id="FLx-Pn-B6s"/>
                     <constraint firstItem="fuU-2t-guK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="MFD-Cn-Sxy"/>
                 </constraints>
             </tableViewCellContentView>
