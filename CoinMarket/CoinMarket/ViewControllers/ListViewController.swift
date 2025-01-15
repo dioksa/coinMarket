@@ -34,8 +34,6 @@ final class ListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        searchBar.showsCancelButton = false
-        
         timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector:#selector(currentTimeChanged) , userInfo: nil, repeats: true)
         
     }
@@ -64,7 +62,6 @@ final class ListViewController: UIViewController {
     
     @objc private func currentTimeChanged() {
         presenter?.loadList()
-        print("Data has reloaded after 5 minutes")
     }
 }
 
@@ -108,7 +105,6 @@ extension ListViewController: ListViewDelegate {
     
     func stopRefreshing() {
         searchBar.text = nil
-        searchBar.showsCancelButton = false
         refreshControl.endRefreshing()
     }
 }
@@ -117,24 +113,17 @@ extension ListViewController: ListViewDelegate {
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchBar.showsCancelButton = true
         
         if searchText.count == .zero {
             presenter?.clearResults()
         }
         
-        // MARK: - If user wants live search, than it is possible to use 'presenter?.showSearchResults(for: searchText)' instead of 'searchBarSearchButtonClicked' func
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else { return }
-        presenter?.showSearchResults(for: text)
+        presenter?.showSearchResults(for: searchText)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         presenter?.clearResults()
         searchBar.text = nil
         searchBar.endEditing(true)
-        searchBar.showsCancelButton = false
     }
 }
