@@ -10,7 +10,7 @@ import Foundation
 struct CurrencyDetails: Codable {
     let id: Int
     let name, symbol: String
-    let maxSupply: Int?
+    let maxSupply: Double?
     let totalSupply: Double
     var quote: Quote
 
