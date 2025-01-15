@@ -73,7 +73,6 @@ final class ListPresenter: ListPresenterProtocol {
         data?.forEach { currency in
             if currency.name.contains(word) || currency.symbol.contains(word) {
                 searchResults?.append(currency)
-                print(currency)
             }
         }
         
